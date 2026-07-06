@@ -8,7 +8,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "https://thread-county-one.vercel.app",  # update when deployed
+        "https://*.vercel.app",  # update when deployed
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -22,3 +22,9 @@ app.include_router(reports.router)
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+if __name__ == "__main__":
+    import uvicorn
+    import os
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port)
