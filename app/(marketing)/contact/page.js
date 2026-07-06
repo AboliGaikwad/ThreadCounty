@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Mail, Github, Twitter } from "lucide-react";
+import { Mail, Github, X } from "lucide-react";
 import { supabase } from "@/lib/supabaseClient";
 
 export default function ContactPage() {
@@ -43,7 +43,7 @@ export default function ContactPage() {
                 github.com/threadcounty
               </a>
               <a href="https://twitter.com" target="_blank" className="flex items-center gap-3 text-sm text-ecru/70 hover:text-gold">
-                <Twitter className="h-4 w-4 text-gold" strokeWidth={1.5} />
+                <X className="h-4 w-4 text-gold" strokeWidth={1.5} />
                 @threadcounty
               </a>
             </div>
